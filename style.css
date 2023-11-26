@@ -587,7 +587,7 @@ form button:hover {
 
 
 .card {
-    width: 90vw;
+    width: 80vw;
     /* height: 500px; */
   }
 
@@ -701,7 +701,7 @@ form button:hover {
   h4 {font-size: 1.2rem;
     margin-bottom: 0rem;}
   .test-1 {height: 3.5rem;}
-  .test-2 {height: 12.5rem;}
+  .test-2 {height: 10.5rem;}
   .small {font-size: 0.9rem;}
 }
 
