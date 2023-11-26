@@ -193,9 +193,10 @@ banner3_image: /images/IMG_2281.jpg
 
 
 <!-- Section Workout Plans - Desktop ---------------->
-<section class="grid-spaceBetween padded-sm xs-hide">
+<section class="padded-sm xs-hide show">
     <h3 class="col-12 heading big-bold center editable">The Guides and Routines</h3>
     <h2 class="col-12 kursiv green center editable">Become your best version</h2>
+    <div class="grid">
         {% for item in page.cards %}
         <div class="col-4_md-6_xs-12-middle padded-1">
             <div class="medium right">
@@ -230,6 +231,7 @@ banner3_image: /images/IMG_2281.jpg
             </div>  
         </div> 
         {% endfor %}
+    </div>
 </section>
 
 
