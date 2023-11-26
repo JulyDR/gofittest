@@ -196,40 +196,44 @@ banner3_image: /images/IMG_2281.jpg
 <section class="grid-spaceBetween padded-sm">
     <h3 class="col-12 heading big-bold center editable">The Guides and Routines</h3>
     <h2 class="col-12 kursiv green center editable">Become your best version</h2>
-    {% for item in page.cards %}
-    <div class="col-4_md-6_xs-12-middle padded-1 xs-hide">
-        <div class="medium right">
-          <div class="card-image" style="background-image:url('{{item.cards_image}}');">
-            <!-- <p class="right tag">{{item.price}}</p> -->
-          </div> 
-            <div class="center"> 
-                <h4 class="padded-05 margin-b test-1"> {{item.title}}</h4> 
-                <p class="padded-05 test-2 small"> {{item.description}}</p> 
-                <div class="grid">
-                    <!-- <div class="col-12 center">
-                        <button class="button-dark margin-t editable snipcart-add-item shop"             
-                        data-item-id="{{item.title}}"
-                        data-item-price="{{item.snipcartprice}}"
-                        data-item-description="{{item.description}}"
-                        data-item-image="{{item.cards_image}}"
-                        data-item-name="{{item.title}}"
-                        data-item-file-guid="{{item.snipcardid}}">
-                        Add to Cart <i class="fa-solid fa-cart-shopping shop"></i>         
-                      </button> 
-                    </div> -->
-                    <div class="medium col-12">
-                        <button class="accordion small">Details of the Plan
-                           <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        <div class="pannel">
-                          <p class="left">{{item.details}}</p>
+
+    <div class="xs-hide grid">
+        {% for item in page.cards %}
+        <div class="col-4_md-6_xs-12-middle padded-1">
+            <div class="medium right">
+              <div class="card-image" style="background-image:url('{{item.cards_image}}');">
+                <!-- <p class="right tag">{{item.price}}</p> -->
+              </div> 
+                <div class="center"> 
+                    <h4 class="padded-05 margin-b test-1"> {{item.title}}</h4> 
+                    <p class="padded-05 test-2 small"> {{item.description}}</p> 
+                    <div class="grid">
+                        <!-- <div class="col-12 center">
+                            <button class="button-dark margin-t editable snipcart-add-item shop"             
+                            data-item-id="{{item.title}}"
+                            data-item-price="{{item.snipcartprice}}"
+                            data-item-description="{{item.description}}"
+                            data-item-image="{{item.cards_image}}"
+                            data-item-name="{{item.title}}"
+                            data-item-file-guid="{{item.snipcardid}}">
+                            Add to Cart <i class="fa-solid fa-cart-shopping shop"></i>         
+                          </button> 
+                        </div> -->
+                        <div class="medium col-12">
+                            <button class="accordion small">Details of the Plan
+                               <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="pannel">
+                              <p class="left">{{item.details}}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-              </div>  
-        </div>  
-    </div> 
-    {% endfor %}
+                  </div>  
+            </div>  
+        </div> 
+        {% endfor %}
+    </div>
+
 </section>
 
 
