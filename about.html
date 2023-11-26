@@ -1,0 +1,114 @@
+---
+layout: default
+title: GoFitWithAlden
+seo:
+   title: Who is behind GoFitWithAlden
+   description: Your fitness and nutrition expert
+   social_image:
+   twitter_card:
+   twitter_description:
+   author: Alden Reyes
+   keywords: Fitness, Nutrition, Experts, Trained,
+   hide-from-google:
+_comments:
+   title: Max 70 characters
+   social_image: Landscape 1200 x 600px
+banner:
+   -
+      title: Banner 1
+      description: >-
+         Are you ready to unlock your full potential? <br>Join us for the <a
+         href=challenges.html><u>75 days Challenge</u></a>!
+icon:
+   -
+      icon: fa-solid fa-graduation-cap
+      description: ...based on science & experience
+   -
+      icon: fa-solid fa-bullseye
+      description: ...targeted to your specific needs and goals
+   -
+      icon: fa-solid fa-display
+      description: ...online available to access from anywhere at any time
+banner1_image: /images/IMG_2419.jpg
+banner2_image: /images/about-2.jpg
+banner3_image: /images/IMG_2523.jpg
+---
+<!-- Welcome Banner -->
+<section class="bg-image tall-70 grid center" style="background-image:url('{{page.banner1_image}}');">
+    <div class="col-12-middle">
+      <h3 class="big-bold">
+        <span class="highlight wide editable"> My Story </span> <br />
+        <span class="highlight kursiv green editable"> Unlock your full potential </span> <br />
+      </h3>
+    </div>
+</section>
+
+<!----------------About Section ------------------->
+<section class="grid-spaceAround padded-sm padded-l-r">
+    <div class="col-3_md-12-middle bg-image individual md-hide rounded position" style="background-image:url('{{page.banner2_image}}');"></div>
+    <div class="col-9_md-12-middle padded">
+        <h3>
+            <span class="highlight big-bold editable"> Hey, I'm Alden </span> <br />
+            <span class="highlight kursiv green editable"> The Soul behind GoFitWithAlden </span> <br />
+        </h3>
+        <p class="editable margin-t">My journey into the world of fitness and nutrition began at a young age. What started as working out after school with friends, became a fascination for the human body, the anatomy and how the body's system responds and adapts to exercise.</p>
+        <p class="editable margin-t">
+           I therefore decided to study Nutrition and Dietetics. I completed my studies in 2023, specializing in the exploration of the nutritional advantages of intermittent fasting, specifically its applications for optimizing both gym performance and daily life.
+        </p>
+        <p class="editable margin-t">Since the beginning my goal has been to help motivate my clients to meet their fitness goals, by developing effective fitness plans. I will always be there to encourage you and help you push past your limits! Let's embark on this journey!</p>
+        <p class="editable margin-t">
+           Interested in participating in the 75-day online challenge? Receive all relevant information and special offers by subscribing today.
+        </p>
+    </div>
+    <div class="col-5_xs-8-middle bg-image landscape-wide hide md-show rounded position margin-t-b" style="background-image:url('{{page.banner2_image}}');"></div> 
+</section>
+
+<!-- CTA Banner -->
+<section>
+    {% for item in page.banner limit:1 %}
+
+        {% include banner.html %}
+
+    {% endfor %}
+</section>
+
+<!--  Icon Section -->
+<section class="grid-center margin-b-4 padded-sm">
+    <div class="col-12 padded margin-l-r">
+        <h3 class="heading big-bold center editable">Why Me?</h3>
+        <h2 class="kursiv green center editable"> The Fitness-Plans are...</h2>
+   </div>
+
+    {% for item in page.icon %}
+
+        {% include icon-section.html %}
+
+    {% endfor %}
+    
+</section>
+
+<!-------------------------------------Customer Review Section ----------------------->
+    <!-- <section class="grid-center padded">
+        <h2 class="col-12 center heading big-bold center editable">The Fitness Journey of Other Members...</h2>
+        
+        {% for item in page.review %}
+        <div class="col-3_md-4_sm-6_xs-12-middle padded">
+            <p>"{{item.description}}"</p>
+            <p class="author green"> - {{item.author}}</p>
+        </div>
+        {% endfor %}
+     -->
+
+
+
+<!--  Foto Section 3 -->
+<section class="bg-image tall-30 grid-left margin-t" style="background-image:url('{{page.banner3_image}}');">
+    <div class="col-6_sm-12-middle padded-bg white opacity padded-l-r">
+        <p class="editable margin-t">I am a fitness and nutrition expert, highly trained and committed to your success.</p>
+        <p class="editable margin-t">Are you ready to start your path to a healthier and more fulfilling life?</p>
+        <p class="editable margin-t">Join the GoFitwithAlden family today and unleash your best self!</p>
+        <div>
+            <a href="/challenges.html" class="button-dark right margin-t editable"> Learn about the 75-Days Challenge</a>  
+        </div>
+    </div>  
+</section>

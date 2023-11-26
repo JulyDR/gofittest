@@ -1,0 +1,23 @@
+seo:
+  site_name: Go Fit With Alden
+  title: Go Fit With Alden
+  description: Online customized Fitness and Nutrition coaching
+  keywords: fitness, nutrition, training, personalized, 
+  social_image: /images/completelogo.png
+  author: Alden Reyes
+  favicon_image: /images/favicon.png
+social:
+  instagram_username: https://www.instagram.com/gofitwithalden/
+  facebook_url: https://www.facebook.com/gofitwithalden
+  twitter_username:
+  twitter_description:
+design:
+  light-text_color: '#85b42b'
+  dark-text_color: '#266229'
+  grey-text_color: '#313132'
+  featured-text_color: '#344E35'  
+  light_color: '#85b42b'
+  dark_color: '#266229'
+  medium_color: '#e1eee9'
+  featured_color: '#344E35'  
+  v-light_color: '#f9f9f9'

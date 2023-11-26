@@ -1,0 +1,630 @@
+/*------------- CSS RESET -------------------- */
+* {
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {scroll-behavior: smooth;}
+
+img {max-width: 100%; height: auto;}
+
+/* Override default gridlex padding */ 
+[class*="col-"], [class*="col_"], [class~="col"] { padding: 0;  margin: 0; }
+
+section { position: relative; }
+
+/* --------------------------------------Utility Classes ----------------------------------------------------------- */
+
+.tall-80  { min-height: 80vh; }
+.tall-70  { min-height: 70vh; }
+.tall-50  { min-height: 50vh; }
+.tall-30  { min-height: 30vh; }
+.tall-20  {  min-height: 20vh;}
+
+
+/* ------------------Padding Utility Classes ------------------- */
+
+.padded-sm      { padding: 2.5%; }
+.padded, 
+.padded-img     { padding: 5%;   }
+.padded-bg,
+.grid.padded-bg { padding: 10%;  }
+.padded-lg,
+.grid.padded-lg { padding: 15%;  }
+
+.padded-05      { padding: 0.5rem; }
+.padded-1,
+.grid.padded-1  { padding: 1rem; }
+.padded-2        { padding: 2rem; }
+
+.padded-l-r {padding-left: 10%; padding-right: 10%;}
+.padded-l-r-sm {padding-left: 3%; padding-right: 3%;}
+
+.padded-b-0 {padding-bottom: 0;}
+
+
+/* ------------------Margin Utility Classes ------------------- */
+
+.margin-t       {margin-top: 1rem;}
+.margin-t-bg    {margin-top: 6rem;}
+
+.margin-b-0     { margin-bottom: 0rem; }
+.margin-b-4     { margin-bottom: 4rem; }
+
+.margin-t-b    {margin-top: 1rem; margin-bottom: 1rem;}
+
+.margin-l-r     {margin-left: 0.5rem; margin-right: 0.5rem;}
+.margin-l-r-big {margin-left: 1%; margin-right: 1%;}
+
+
+/* -------------------------------------------- Background & Background Images --------------------------------------- */
+
+.dark     { background-color: var(--dark);}
+.white    { background-color: #fff;}
+
+.bg-image,
+[class*=bg-image]  {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.position {background-position: 75%, 50%;}
+
+.rounded {border-radius: 95px;}
+
+/* Aspect Ratios with percentage unit are only effective if the element (the <div>) is inside a parent container or column, it can't be applied to the column itself. */
+
+a.bg-image { display: block;}
+
+.individual     {padding-bottom: 40%;}
+.landscape-wide {padding-bottom: 56%;}
+
+
+/*--------------------- Logo ------------------- */
+.bg-logo {
+  background-image: url(/images/completelogo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 2.5rem 4rem;
+}
+
+.bg-logo-small {
+  background-image: url(/images/completelogo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 2.0rem 4rem;
+  margin-bottom: 0.5rem;
+}
+
+
+/*-------------------- Video ------------------*/
+#vimeo-container {
+	max-width: 1%;
+}
+
+.vimeo-embed-container {
+ 	padding: 56.25% 0 0 0;
+	position: relative;
+}
+
+/* Overlay Style for Images with Text */
+/* .bg-overlay::after {
+  z-index: 1;
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+} */
+
+/* .bg-overlay > * {
+  z-index: 2;
+  position: relative;
+} */
+
+
+/* -------------------------------------------Typography Styles ----------------------------------------- */
+
+.left      { text-align: left;}
+.right     { text-align: right;}
+.center    { text-align: center;}
+
+body {
+  font-family: 'Hind Madurai', sans-serif;
+  color: var(--grey-text);
+  font-size: 1.2rem;
+  letter-spacing: -0.2px;
+}
+
+h2, h3, h4, h5, h6 {
+  line-height: 1;
+  margin-bottom: 1rem;
+  }
+
+h1  { font-size: 2.5rem; }
+h2  { font-size: 2.2rem;  }
+h3  { font-size: 1.8rem;  }
+h4  { font-size: 1.4rem;  }
+h5  { font-size: 1.2rem; }
+h6  { font-size: 1rem; }
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  font-weight: 300;   
+  font-size: 1.1rem;
+ }
+
+ul {font-size: 1.1rem;}
+
+li {
+  line-height: 1.2;
+  margin-bottom: 0rem;
+  font-weight: 300;   
+  font-size: 1rem;
+  margin-left: 1rem;
+ }
+
+
+/* this makes sure that the last element in any container doesn't have margin-bottom */
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child {
+  margin-bottom:0;
+    }
+
+/* Unique Typography Styles */
+.white-text   { color: white; }
+.green        { color: var(--dark-text);}
+
+.wide {letter-spacing: 1rem;}
+.opacity {opacity: 80%;}
+.underline {border: 1px solid white;}
+
+.heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+  font-size: 2.5rem;
+  line-height: 1.3em;
+} 
+
+.kursiv {
+  font-family: 'Lora, serif';
+  /* font-style: italic; */
+}
+
+.big-bold {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.highlight {
+  background-color: rgb(240, 240, 245, 0.7);
+  display: inline-block;
+  padding: 0.5rem;
+  margin: 2px;
+}
+
+.flex-flip {
+  display: flex;
+  flex-flow: row-reverse wrap;
+}
+
+/* -----------------------------------------------------Links--------------------------------------------------------- */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover { color: var(--light-text);}
+
+.inline a {
+  display:inline-block;
+  padding: 0.5rem;
+}
+
+p a {
+  border-bottom: 1px solid green;
+}
+
+
+
+/*-------------------- ------------------------------------Button -------------------------------------*/
+/* .button-white {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid white; 
+  background-color: white;
+  font-weight: 400;
+  color: var(--grey-text);
+} */
+
+/* .button-white:hover {
+  background-color: var(--dark);
+  border: 2px solid var(--dark);
+  color: white;
+} */
+
+.button-dark {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--dark);
+  background-color: var(--dark);
+  font-weight: 400;
+  color: white;
+  font-size: 1.2rem;
+  }
+
+.button-dark:hover {
+  background-color: white;
+  border: 2px solid var(--dark);
+  color: var(--dark);
+}
+
+/*------------------------------------------------ Navigation Bar -------------------------------------------------------*/
+nav {  
+  font-size: 1.1rem;
+  line-height: 2.2rem;
+}
+
+.navigation {
+  position: fixed;
+  left: 25px;
+  top: 5px;
+  right: 25px;
+  background-color: #fff;
+  opacity: 85%;
+  z-index: 201;
+}
+
+.nav-link {
+  padding: 0.7rem;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--light-text);
+}
+
+
+
+
+/* --------------------------------------------------- Hamburger Menu ------------------------------------------------------ */
+.burger-menu {
+  display: flex;
+  position: fixed;
+  top: -100vh;
+  left:0;
+  right: 0;
+  bottom: 100vh;
+  text-align: center;
+  padding: 20%;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  z-index: 8;
+  transition:1s;
+  align-content:space-around;
+  justify-content:space-around;
+  flex-direction:column;
+  background-color: #fff
+}
+
+.burger-menu.active{
+  top: 90px;
+  bottom: 20px;
+  left: 25px;
+  right: 25px;
+}
+
+.burger-menu a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--dark-text);
+  display:block;
+  padding: 3vh 5%;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.burger-menu a:hover {
+  color: var(--light-text);
+}
+
+/* Burger Button */
+.burger-button {
+  position:fixed;
+  top: 40px;
+  right: 20px;
+  z-index: 9;
+  padding: 8.5px;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.burger-button span{
+  width: 40px;
+  border: 2px solid var(--medium);
+  background-color: var(--medium);
+  display: block;
+  border-radius: 22px;
+  transition: 2s;
+}
+
+.burger-button.active span{
+  border-color: var(--medium);
+  background-color:var(--medium);
+}
+
+.burger-top, .burger-bottom{ position: absolute;}
+.burger-top                { top: -01px;}
+.burger-bottom             {  bottom: -01px;}
+
+ .burger-button.active .burger-top{
+  position: absolute;
+  top: 8.5px;
+  transform: rotateZ(45deg);
+}
+
+.burger-button.active .burger-middle{
+  border-color: rgba(0,0,0,0);
+  background-color:rgba(0,0,0,0);
+}
+
+.burger-button.active .burger-bottom{
+  position: absolute;
+  bottom: 8.5px;
+  transform: rotateZ(-45deg);
+}
+
+
+/* --------------------------------Icon Section -------------------------- */
+.fa-solid {
+  display: block;
+  text-align: center;
+  margin-bottom: 0rem;
+  font-size: 12vh;
+  color: var(--dark);
+}
+
+.fa-solid.shop {
+  font-size: 1rem;
+  display: inline;
+  margin-left: 0.2rem;
+  color: var(--light);
+  }
+
+/*--------------------------------------MODAL -----------------------------------------*/
+/* .modal-content .bg-image{
+  padding-bottom: 100%;
+  margin: 1rem;
+  } */
+  
+  .modal {
+    display: none;
+    /* position: absolute; */
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background-color: #fefefe;
+    /* background-color: rgba(0,0,0,0.6); */
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    position: absolute;
+    left: 50%;
+    top: 421px;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* .modal-open {
+    overflow-y: hidden; /* disables vertical scrolling of website when modal is open */
+  /* } */ 
+
+  .show {
+    overflow-y: auto; /* keeps vertical scrolling of modal when it's open */
+  }  
+
+/* ------------------------------------Testimonial Slider ------------------------- */
+/* .author {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+  text-align: right;
+} */
+
+/* ----------------------------------------FAQ --------------------------------------------*/
+.accordion {
+  background-color: white;
+  color: var(--grey-text);
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.accordion i {
+  font-size: 1.6rem;
+}
+
+.accordion:hover {
+  background-color: var(--medium);
+}
+.pannel {
+  padding: 0 2rem 2.5rem 2rem;
+  background-color: white;
+  overflow: hidden;
+  background-color: var(--medium);
+  display: none;
+}
+
+.faq {
+  border: 1px solid  var(--grey-text);
+  margin: 0px 30px;
+}
+.faq.active {
+  border: none;
+}
+
+/* ----------------------------------Contact Form ------------------------------------ */
+form input, 
+form textarea {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 2px solid var(--grey-text);
+  outline: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--dark);
+}
+
+textarea {
+  min-height: 8rem;
+}
+
+form label {
+  display: block;
+  color: var(--grey-text);
+  font-weight: bold;
+}
+
+form button {
+  background-color: var(--dark);
+  color: white;
+  border: none;
+  padding: 0.8rem 3.5rem;
+  letter-spacing: 0.1em;
+  margin: 0.5rem 0;
+  font-family: inherit;
+}
+
+form button:hover {
+  background-color: white;
+  color: var(--dark-text);
+  border: 1px solid var(--dark);
+}
+
+/* SnipCart */
+.snipcart-modal__container {
+  z-index: 999;
+}
+
+/* -----------------animation -------------- */
+
+@keyframes fade-in {0% {opacity:0;}
+                    100% {opacity: 1;}}
+
+
+.fade-in {animation: fade-in 3s ease-out forwards;}
+
+
+
+/* --------------------------------Responsive Classes ------------------------------- */
+
+.show {display: block;} 
+.hide {display: none;}
+
+/* ------ MD, max 1024px,---------------- */
+@media(max-width:64em) {
+  .md-hide {display: none;}
+  .md-show {display: block}
+  .margin-t {margin-top: 0.5rem;}
+  .big-bold {font-size: 2.6rem;}
+  .heading {font-size: 2.25rem;}
+  .padded-1, .grid.padded-1 {padding: 0.5rem; }
+  .wide {letter-spacing: 0.7rem;}
+  .button-dark {font-size: 0.9rem;}
+}
+
+/* ------ sm, max 768px,---------------- */
+@media(max-width:48em) {
+  .mob-hide {display: none;}
+  .mob-show {display: block;}
+
+  body,
+  p, ul, li              {font-size: 0.9rem;}
+  .accordion,.pannel p {font-size: 0.8rem;}
+  h2,
+  .heading       {font-size: 1.5rem;}
+  h3 {font-size: 1.6rem;
+    margin-bottom: 0rem;}
+  footer a        {font-size: 0.9rem;}
+  .big-bold       {font-size: 1.6rem;}
+  .fa-solid       {font-size: 4rem;}
+
+  .burger-menu a  {font-size: 1.2rem;}
+
+  .tiny           {font-size: 0.7rem; padding: 0.4rem;}
+  .bg-logo        {padding: 2.5rem;}
+  .flex-flip-sm   {flex-direction: column-reverse;}
+  .wide           {letter-spacing: 0.4rem;}
+  .tall-50        {min-height: 30vh;} 
+  nav             {line-height: 1rem;}
+  .margin-t-bg    {margin-top: 3rem;}
+  .heading {margin-bottom: 0;}
+
+}
+
+/* ------ xs, max 576px,---------------- */
+@media(max-width:36em) {
+  .tall-80 {min-height: 70vh;}
+  .tall-70 {min-height: 45vh;}
+  .padded-img {padding: 12%;}
+  h2, 
+  .heading {font-size: 1.2rem;
+            margin-bottom: 0.5rem;}
+  h3 {font-size: 1.4rem;
+      margin-bottom: 0rem;}
+  .margin-b {margin-bottom:0;}
+  .xs-hide {display: none;}
+  .xs-show {display: grid;}
+}
+
+

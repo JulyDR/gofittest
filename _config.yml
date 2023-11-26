@@ -1,0 +1,10 @@
+plugins:
+  - jekyll-sitemap
+  - protector
+
+collections:
+  protected:
+    output: true
+    _disable_add: true
+    filter: strict
+    path: ''

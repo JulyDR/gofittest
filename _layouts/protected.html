@@ -1,0 +1,58 @@
+---
+layout: default
+banner1_image: /images/IMG_2332.jpg
+---
+
+<!-- Welcome Banner -->
+<section class="bg-image tall-70 grid center" style="background-image:url('{{page.banner1_image}}');">
+    <div class="col-12-middle">
+      <h3 class="big-bold">
+        <span class="highlight wide editable"> Access the Challenge</span> <br>
+        <span class="highlight kursiv green editable"> Unlock your full potential </span> <br>
+      </h3>
+    </div>
+</section>
+
+<section class="padded">
+  <div id="content">
+    Insert password to access content
+    <input id="password" type="password">
+    <button onclick="decrypt()">Go!</button>
+    <p id="errmsg" style="color: #266229;"></p>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  function decrypt() {
+    var protectedContent = "{{ page.protected_content }}";
+    var password = document.getElementById('password').value;
+
+    var payload = protectedContent.split("|");
+    var iv = payload[0];
+    var hmac = payload[1];
+    var cipherText = payload[2];
+
+    var passphraseDgst = CryptoJS.SHA256(password).toString();
+    var decryptedhmac = CryptoJS.HmacSHA256(cipherText, CryptoJS.enc.Hex.parse(passphraseDgst)).toString().trim();
+    if(CryptoJS.enc.Base64.parse(hmac).toString() === decryptedhmac){
+      var decrypted = CryptoJS.AES.decrypt(
+        {ciphertext:CryptoJS.enc.Base64.parse(cipherText)},
+        CryptoJS.enc.Hex.parse(passphraseDgst),
+        {iv:CryptoJS.enc.Base64.parse(iv)}
+      );
+      var content = CryptoJS.enc.Utf8.stringify(decrypted);
+      document.getElementById('content').innerHTML = content;
+    } else {
+      document.getElementById('errmsg').innerHTML = "Wrong password";
+    }
+  }
+
+  var passwordInput = document.getElementById('password');
+  passwordInput.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      decrypt();
+    }
+  })
+</script>
