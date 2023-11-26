@@ -581,8 +581,13 @@ form button:hover {
     }
   }
 
+  .scrolling-wrapper-flexbox {
+    -webkit-overflow-scrolling: touch;
+  }
+
+
 .card {
-    width: 320px;
+    width: 500px;
     /* height: 500px; */
   }
 
