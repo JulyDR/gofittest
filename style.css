@@ -22,6 +22,9 @@ section { position: relative; }
 .tall-20  {  min-height: 20vh;}
 
 
+.test-1 {height: 3rem;}
+.test-2 {height: 10.5rem;}
+
 /* ------------------Padding Utility Classes ------------------- */
 
 .padded-sm      { padding: 2.5%; }
@@ -60,6 +63,7 @@ section { position: relative; }
 /* -------------------------------------------- Background & Background Images --------------------------------------- */
 
 .dark     { background-color: var(--dark);}
+.medium   { background-color: var(--medium); }
 .white    { background-color: #fff;}
 
 .bg-image,
@@ -168,6 +172,8 @@ li {
   font-size: 1rem;
   margin-left: 1rem;
  }
+
+.small {font-size: 1rem;}
 
 
 /* this makes sure that the last element in any container doesn't have margin-bottom */
@@ -473,11 +479,11 @@ nav {
   background-color: white;
   color: var(--grey-text);
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   width: 100%;
   padding: 1rem 2.5rem;
-  border: none;
-  outline: none;
+  /* border: none;
+  outline: none; */
   transition: 0.4s;
   display: flex;
   justify-content: space-between;
@@ -556,6 +562,62 @@ form button:hover {
   z-index: 999;
 }
 
+/* --------------------------------------Card Style on Mobile --------------------------- */
+.card-image {
+  padding-bottom: 100%;
+  border: 3px solid #266229;
+  display: block;
+  background-size: cover;
+  background-position: top;}
+
+
+  .scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  
+    .card {
+      flex: 0 0 auto;
+    }
+  }
+
+.card {
+    width: 270px;
+    /* height: 500px; */
+  }
+
+/* --------------------------------- Overlay ---------------------------------------------- */
+/* --------------------------------Challenges --------------------------------- */
+/* .hover-container {
+  background-size: cover;
+  background-position: center;
+}
+
+.hover-overlay {
+  position: relative;
+  padding-bottom: 100%;
+  color: rgba(255, 255, 255, 0);
+  position: relative; */
+  /* you only need to use relative + absolute if you want to determine the exact aspect ratio of the container */
+  /* transition: all 0.3s;
+}
+
+.hover-overlay:hover {
+  background-color: rgba(60, 60, 60, 0.8);
+  color: white;
+}
+
+.hover-inner {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hover-inner p {
+  margin-bottom: 0;
+} */
+
 /* -----------------animation -------------- */
 
 @keyframes fade-in {0% {opacity:0;}
@@ -581,6 +643,8 @@ form button:hover {
   .padded-1, .grid.padded-1 {padding: 0.5rem; }
   .wide {letter-spacing: 0.7rem;}
   .button-dark {font-size: 0.9rem;}
+  p {font-size: 1rem;}
+  .test-2 {height: 9rem;}
 }
 
 /* ------ sm, max 768px,---------------- */
@@ -595,6 +659,8 @@ form button:hover {
   .heading       {font-size: 1.5rem;}
   h3 {font-size: 1.6rem;
     margin-bottom: 0rem;}
+  h3 {font-size: 1.4rem;
+      margin-bottom: 0rem;}
   footer a        {font-size: 0.9rem;}
   .big-bold       {font-size: 1.6rem;}
   .fa-solid       {font-size: 4rem;}
@@ -609,6 +675,7 @@ form button:hover {
   nav             {line-height: 1rem;}
   .margin-t-bg    {margin-top: 3rem;}
   .heading {margin-bottom: 0;}
+  .test-2 {height: 12rem;}
 
 }
 
@@ -625,6 +692,12 @@ form button:hover {
   .margin-b {margin-bottom:0;}
   .xs-hide {display: none;}
   .xs-show {display: grid;}
+  .card-image {padding-bottom: 70%; background-position: center;}
+  h4 {font-size: 1.2rem;
+    margin-bottom: 0rem;}
+  .test-1 {height: 2.5rem;}
+  .test-2 {height: 11.5rem;}
+  .small {font-size: 0.9rem;}
 }
 
 

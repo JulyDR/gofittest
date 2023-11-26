@@ -14,70 +14,55 @@ _comments:
    title: Max 70 characters
    social_image: Landscape 1200 x 600px
 banner:
-   -
-      title: Banner 1
-      description: >-
-         Are you ready to take the first step toward a 2024 filled with health,
-         vitality and confidence?
+-  title: Banner 1
+   description: Are you ready to take the first step toward a 2024 filled with health, vitality and confidence?
 icon2:
-   -
-      icon: fa-solid fa-dumbbell
-      description: ...increase muscle mass
-   -
-      icon: fa-solid fa-weight-scale
-      description: ...lose weight
-   -
-      icon: fa-solid fa-heart-pulse
-      description: ...improve cardiovascular health
-   -
-      icon: fa-solid fa-spa
-      description: ...improve overall well-being
-item:
-   -
-      title: 75-day Challenge
-      snipcartprice: 60 USD
+-  icon: fa-solid fa-dumbbell
+   description: ...increase muscle mass
+-  icon: fa-solid fa-weight-scale
+   description: ...lose weight
+-  icon: fa-solid fa-heart-pulse
+   description: ...improve cardiovascular health
+-  icon: fa-solid fa-spa
+   description: ...improve overall well-being
 faq:
-   -
-      question: Why did you decide to take on this challenge?
-      answer: >-
-         With over a decade of experience, I feel the urgency to create a
-         positive impact. My goal is to share all the valuable knowledge I've
-         gained throughout this journey. I hope you can make the most out of
-         this information, as it represents a unique perspective that is rarely
-         shared.
-   -
-      question: Who can join this challenge?
-      answer: >-
-         This program welcomes individuals dedicated to enhancing their fitness,
-         irrespective of their current level. Whether you're a beginner,
-         intermediate, or at an advanced fitness stage, this program is designed
-         to cater to and uplift everyone, ensuring valuable benefits for all
-         participants.
-   -
-      question: What is the 75-day online workout challenge?
-      answer: >-
-         It's a comprehensive fitness program (online) designed to help
-         individuals transform their bodies and lifestyles over 75 days through
-         personalized workout routines, nutrition guidance, and community
-         support.
-   -
-      question: Is equipment required for the workouts?
-      answer: >-
-         The program offers a variety of workouts, some of which may require
-         minimal equipment or bodyweight exercises, making it accessible for
-         most participants.
-   -
-      question: What makes this challenge unique?
-      answer: >-
-         This challenge combines personalized fitness plans, ongoing support,
-         and a sense of community, creating an environment that fosters success,
-         motivation, and sustainable lifestyle changes.
-   -
-      question: When will the information be provided?
-      answer: >-
-         The information will be provided as soon as it's ready, at the
-         beginning of December. Meanwhile, you can subscribe to receive updates
-         on its release. Stay tuned for more details!
+-  question: Why did you decide to take on this challenge?
+   answer: With over a decade of experience, I feel the urgency to create a positive impact. My goal is to share all the valuable knowledge I've gained throughout this journey. I hope you can make the most out of this information, as it represents a unique perspective that is rarely shared.
+-  question: Who can join this challenge?
+   answer: This program welcomes individuals dedicated to enhancing their fitness, irrespective of their current level. Whether you're a beginner intermediate, or at an advanced fitness stage, this program is designed to cater to and uplift everyone, ensuring valuable benefits for all participants.
+-  question: What is the 75-day online workout challenge?
+   answer: It's a comprehensive fitness program (online) designed to help individuals transform their bodies and lifestyles over 75 days through personalized workout routines, nutrition guidance, and community support.
+-  question: Is equipment required for the workouts?
+   answer: The program offers a variety of workouts, some of which may require minimal equipment or bodyweight exercises, making it accessible for most participants.
+-  question: What makes this challenge unique?
+   answer: This challenge combines personalized fitness plans, ongoing support, and a sense of community, creating an environment that fosters success, motivation, and sustainable lifestyle changes.
+-  question: When will the information be provided?
+   answer: The information will be provided as soon as it's ready, at the beginning of December. Meanwhile, you can subscribe to receive updates on its release. Stay tuned for more details!
+cards:
+-  title: Unleash Your Best Self<br>Information Guide
+   description: This guide will give you valuable information before you start the 75-day Challenge. It will help you define your body type, you will learn about nutrition and supplements and will receive key input what to consider when exercising.
+   details: + Nutrition Section so you know about a balanced Diet Supplements  and Intermittent Fasting<br>+ Exercise Section with information of Warm-Up, Stretching and Results-Oriented Workouts<br>+ 39 pages packed with highly valuable information
+   price: 60,00 USD
+   snipcartprice: 60.00
+   snipcartid: c12c2fdd-8756-4846-a772-c321fb81506e
+   cards_image: /images/informationguide.png
+   url: 
+-  title: Unleash Your Best Self<br>75-Day Routine
+   description: This Routine will be guiding you to exercise for 75-days. The Routine is divided in 3 months; the first months you will focus on one muscle each day, the second months is about muscle confusion and super sets. In the final months, muscle building and super sets will be combined.  
+   details: + Exercises to train for 5 - 7 Days a week.<br>+ Each Routine/Day can be done in approximately 45 minutes<br>+ Available for women and men<br>+ Over 50 pages of highly effective workout plans.
+   price: 50,00 USD
+   snipcartprice: 50.00
+   snipcartid: c12c2fdd-8756-4846-a772-c321fb81506e
+   cards_image: /images/workoutplan.png
+   url: 
+-  title: Unleash Your Best Self<br>Nutrition Guide
+   description: The Nutrition Plan is a good add-on to combine with the 75-Day Routine  to reach maximal results. However, it can also be used separately. You will receive various meal options to help you eat healthy and nutritient during the day.    
+   details: + Meal Plans divided in Breakfast, Lunch, Snacks and Dinner.<br>+ Available for 3 different body types (Mesomorph, Ectomorph and Endomorph)<br>+ 10 pages of healthy and nutritient meal options.
+   price: 10,00 USD
+   snipcartprice: 10.00
+   snipcartid: c12c2fdd-8756-4846-a772-c321fb81506e
+   cards_image: /images/nutrition.png
+   url: 
 banner1_image: /images/IMG_2330.jpg
 banner2_image: /images/IMG_2465.jpg
 banner3_image: /images/IMG_2281.jpg
@@ -205,6 +190,136 @@ banner3_image: /images/IMG_2281.jpg
 
     {% endfor %}
 </section>
+
+
+<!-- Section Workout Plans - Desktop ---------------->
+<section class="grid-spaceBetween padded-sm">
+    <h3 class="col-12 heading big-bold center editable">The Guides and Routines</h3>
+    <h2 class="col-12 kursiv green center editable">Become your best version</h2>
+    {% for item in page.cards %}
+    <div class="col-4_md-6_xs-12-middle padded-1 xs-hide">
+        <div class="medium right">
+          <div class="card-image" style="background-image:url('{{item.cards_image}}');">
+            <!-- <p class="right tag">{{item.price}}</p> -->
+          </div> 
+            <div class="center"> 
+                <h4 class="padded-05 margin-b test-1"> {{item.title}}</h4> 
+                <p class="padded-05 test-2 small"> {{item.description}}</p> 
+                <div class="grid">
+                    <!-- <div class="col-12 center">
+                        <button class="button-dark margin-t editable snipcart-add-item shop"             
+                        data-item-id="{{item.title}}"
+                        data-item-price="{{item.snipcartprice}}"
+                        data-item-description="{{item.description}}"
+                        data-item-image="{{item.cards_image}}"
+                        data-item-name="{{item.title}}"
+                        data-item-file-guid="{{item.snipcardid}}">
+                        Add to Cart <i class="fa-solid fa-cart-shopping shop"></i>         
+                      </button> 
+                    </div> -->
+                    <div class="medium col-12">
+                        <button class="accordion small">Details of the Plan
+                           <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="pannel">
+                          <p class="left">{{item.details}}</p>
+                        </div>
+                    </div>
+                </div>
+              </div>  
+        </div>  
+    </div> 
+    {% endfor %}
+</section>
+
+
+<!-- Section Workout Plans - Mobile ---------------->
+<div class="hide xs-show padded">
+    <div class="scrolling-wrapper-flexbox">
+        {% for item in page.cards %}
+        <div class="card padded">
+            <div class="card-image" style="background-image:url('{{item.cards_image}}');">
+                <!-- <p class="right tag">{{item.price}}</p> -->
+            </div> 
+            <div class="center medium"> 
+                <h4 class="padded-05 margin-b test-1"> {{item.title}}</h4> 
+                <p class="padded-05 test-2 small"> {{item.description}}</p> 
+                <div class="grid">
+                        <!-- <div class="col-12 center">
+                            <button class="button-dark margin-t editable snipcart-add-item shop"             
+                            data-item-id="{{item.title}}"
+                            data-item-price="{{item.snipcartprice}}"
+                            data-item-description="{{item.description}}"
+                            data-item-image="{{item.cards_image}}"
+                            data-item-name="{{item.title}}"
+                            data-item-file-guid="{{item.snipcardid}}">
+                            Add to Cart <i class="fa-solid fa-cart-shopping shop"></i>         
+                          </button> 
+                        </div> -->
+                    <div class="medium col-12">
+                        <button class="accordion small">Details of the Plan
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="pannel">
+                            <p class="left">{{item.details}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div> 
+        {% endfor %}
+    </div>
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- <section class="grid-spaceBetween padded-sm">
+    {% for item in page.cards %}
+    <div class="col-12 padded-2 hide xs-show">
+        <div class="medium right">
+          <div class="card-image hover-container" style="background-image:url('{{item.cards_image}}');">
+           <p class="right tag">{{item.price}}</p> -->
+            <!-- <div class="hover-overlay">
+                <div class="hover-inner center">
+                    <h4 class="padded-05 margin-b test-1"> {{item.title}}</h4> 
+                    <p class="padded-05 test-2 small"> {{item.description}}</p> 
+                </div>
+            </div>
+          </div> 
+            <div class="center"> 
+                <div class="grid">
+              <div class="col-12 center">
+                        <button class="button-dark margin-t editable snipcart-add-item shop"             
+                        data-item-id="{{item.title}}"
+                        data-item-price="{{item.snipcartprice}}"
+                        data-item-description="{{item.description}}"
+                        data-item-image="{{item.cards_image}}"
+                        data-item-name="{{item.title}}"
+                        data-item-file-guid="{{item.snipcardid}}">
+                        Add to Cart <i class="fa-solid fa-cart-shopping shop"></i>         
+                      </button> 
+                    </div> -->
+                    <!-- <div class="wrapper col-12">
+                        <button class="accordion">Details of the Plan
+                           <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="pannel">
+                          <p class="left">{{item.details}}</p>
+                        </div>
+                    </div>
+                </div>
+              </div>  
+        </div>  
+    </div> 
+    {% endfor %}
+</section>   -->
+
+
 
 <!----------------------About the Challenges ------------------------->
 <section class="grid padded-sm padded-b-0 padded-l-r">
