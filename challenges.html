@@ -193,11 +193,9 @@ banner3_image: /images/IMG_2281.jpg
 
 
 <!-- Section Workout Plans - Desktop ---------------->
-<section class="grid-spaceBetween padded-sm">
+<section class="grid-spaceBetween padded-sm xs-hide">
     <h3 class="col-12 heading big-bold center editable">The Guides and Routines</h3>
     <h2 class="col-12 kursiv green center editable">Become your best version</h2>
-
-    <div class="xs-hide grid">
         {% for item in page.cards %}
         <div class="col-4_md-6_xs-12-middle padded-1">
             <div class="medium right">
@@ -232,13 +230,13 @@ banner3_image: /images/IMG_2281.jpg
             </div>  
         </div> 
         {% endfor %}
-    </div>
-
 </section>
 
 
 <!-- Section Workout Plans - Mobile ---------------->
-<div class="hide xs-show padded">
+<section class="grid-spaceBetween padded-sm hide xs-show">
+    <h3 class="col-12 heading big-bold center editable">The Guides and Routines</h3>
+    <h2 class="col-12 kursiv green center editable">Become your best version</h2>
     <div class="scrolling-wrapper-flexbox">
         {% for item in page.cards %}
         <div class="card padded">
@@ -273,55 +271,9 @@ banner3_image: /images/IMG_2281.jpg
         </div> 
         {% endfor %}
     </div>
-</div>
-
-
 </section>
 
 
-
-
-
-<!-- <section class="grid-spaceBetween padded-sm">
-    {% for item in page.cards %}
-    <div class="col-12 padded-2 hide xs-show">
-        <div class="medium right">
-          <div class="card-image hover-container" style="background-image:url('{{item.cards_image}}');">
-           <p class="right tag">{{item.price}}</p> -->
-            <!-- <div class="hover-overlay">
-                <div class="hover-inner center">
-                    <h4 class="padded-05 margin-b test-1"> {{item.title}}</h4> 
-                    <p class="padded-05 test-2 small"> {{item.description}}</p> 
-                </div>
-            </div>
-          </div> 
-            <div class="center"> 
-                <div class="grid">
-              <div class="col-12 center">
-                        <button class="button-dark margin-t editable snipcart-add-item shop"             
-                        data-item-id="{{item.title}}"
-                        data-item-price="{{item.snipcartprice}}"
-                        data-item-description="{{item.description}}"
-                        data-item-image="{{item.cards_image}}"
-                        data-item-name="{{item.title}}"
-                        data-item-file-guid="{{item.snipcardid}}">
-                        Add to Cart <i class="fa-solid fa-cart-shopping shop"></i>         
-                      </button> 
-                    </div> -->
-                    <!-- <div class="wrapper col-12">
-                        <button class="accordion">Details of the Plan
-                           <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        <div class="pannel">
-                          <p class="left">{{item.details}}</p>
-                        </div>
-                    </div>
-                </div>
-              </div>  
-        </div>  
-    </div> 
-    {% endfor %}
-</section>   -->
 
 
 
