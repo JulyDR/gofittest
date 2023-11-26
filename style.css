@@ -23,7 +23,8 @@ section { position: relative; }
 
 
 .test-1 {height: 3rem;}
-.test-2 {height: 10.5rem;}
+.test-2 {height: 12.5rem;}
+.test-3 {height: 10rem;}
 
 /* ------------------Padding Utility Classes ------------------- */
 
@@ -649,7 +650,7 @@ form button:hover {
   .wide {letter-spacing: 0.7rem;}
   .button-dark {font-size: 0.9rem;}
   p {font-size: 1rem;}
-  .test-2 {height: 9rem;}
+  .test-2 {height: 11rem;}
 }
 
 /* ------ sm, max 768px,---------------- */
@@ -680,7 +681,7 @@ form button:hover {
   nav             {line-height: 1rem;}
   .margin-t-bg    {margin-top: 3rem;}
   .heading {margin-bottom: 0;}
-  .test-2 {height: 12rem;}
+  .test-2 {height: 14rem;}
 
 }
 
