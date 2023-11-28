@@ -592,6 +592,15 @@ form button:hover {
     /* height: 500px; */
   }
 
+  .tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--dark);
+    background-color: var(--dark);
+    font-weight: 400;
+    color: white
+    }
+
 /* --------------------------------- Overlay ---------------------------------------------- */
 /* --------------------------------Challenges --------------------------------- */
 /* .hover-container {
