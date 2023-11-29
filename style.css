@@ -577,9 +577,6 @@ form button:hover {
     flex-wrap: nowrap;
     overflow-x: auto;
   
-    .card {
-      flex: 0 0 auto;
-    }
   }
 
   .scrolling-wrapper-flexbox {
@@ -589,6 +586,7 @@ form button:hover {
 
 .card {
     width: 80vw;
+    flex: 0 0 auto;
     /* height: 500px; */
   }
 
