@@ -585,7 +585,7 @@ form button:hover {
 
 
 .card {
-    width: 80vw;
+    width: 30vw;
     flex: 0 0 auto;
     /* height: 500px; */
   }
@@ -706,6 +706,7 @@ form button:hover {
   .xs-hide {display: none;}
   .xs-show {display: grid;}
   .card-image {padding-bottom: 70%; background-position: center;}
+  .card {width: 80vw; }
   h4 {font-size: 1.2rem;
     margin-bottom: 0rem;}
   .test-1 {height: 3.5rem;}
